@@ -55,7 +55,8 @@ class GameOverScene extends Phaser.Scene {
       btn.addEventListener('click', () => {
         user.classList.remove('show');
         user.classList.add('hide');
-        if (input.value !== null) sendData(input.value, this.score);
+        if (input.value !== null) {sendData(input.value, this.score.toString())};
+        console.log(input.value , this.score)
         input.value = '';
       });
     }, this);

@@ -10,7 +10,10 @@ const sendData = (userName, userScore)  => {
     body: JSON.stringify({ user: userName, score: userScore }),
   }).then((res) => {
     res.json();
-  }).then((json) => json);
+  }).then((json) => {
+    console.log(json);
+    return json
+  });
 };
 
 
