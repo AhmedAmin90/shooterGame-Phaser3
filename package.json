@@ -7,7 +7,7 @@
     "./src/index.js"
   ],
   "scripts": {
-    "start": "webpack --watch",
+    "start": "webpack",
     "build": "webpack",
     "test": "jest",
     "watch": "webpack --watch"
