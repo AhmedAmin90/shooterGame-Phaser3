@@ -1,0 +1,37 @@
+* {
+  margin: auto;
+}
+
+input {
+  width: 250px;
+  height: 50px;
+  border: 1px blueviolet dashed;
+  border-radius: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.show{
+  display: block;
+  position: absolute;
+  top: 220px;
+  left: 475px
+}
+
+.submit {
+  width: 100px;
+  height: 50px;
+  color: azure;
+  background-color: white;
+  color:blueviolet;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit:hover{
+  color: white;
+  background-color: blueviolet;
+}
