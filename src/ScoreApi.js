@@ -1,11 +1,6 @@
 const myApiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/q9gCOWUoQdHlTLV9p8RX/scores/';
 
 const sendData = async (userName, userScore) => {
-  let finalscore;
-  if (userScore === 0) 
-    {finalscore = '0';}
-  else  
-    {finalscore = userScore };
    fetch(myApiUrl, {
     method: 'POST',
     mode: 'cors',
@@ -13,7 +8,7 @@ const sendData = async (userName, userScore) => {
       Accept: 'Application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ user: userName, score: finalscore }),
+    body: JSON.stringify({ user: userName, score: userScore }),
   });
 
   try {
