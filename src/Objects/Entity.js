@@ -42,4 +42,4 @@ class Entity extends Phaser.GameObjects.Sprite {
   }
 }
 
-export default Entity
+export default Entity;

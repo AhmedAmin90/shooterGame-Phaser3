@@ -55,8 +55,6 @@ class OptionsScene extends Phaser.Scene {
       this.game.sound.mute = false;
     }
   }
-
-
 }
 
-export default  OptionsScene
+export default OptionsScene;

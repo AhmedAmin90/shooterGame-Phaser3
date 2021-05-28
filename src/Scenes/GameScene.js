@@ -21,7 +21,7 @@ class GameScene extends Phaser.Scene {
       frameHeight: 32,
     });
     this.load.image('sprEnemy1', '../assets/sprEnemy1.png');
-    this.load.spritesheet('sprEnemy2', '../assets/sprEnemy2.png' , {
+    this.load.spritesheet('sprEnemy2', '../assets/sprEnemy2.png', {
       frameWidth: 16,
       frameHeight: 16,
     });
@@ -234,5 +234,4 @@ class GameScene extends Phaser.Scene {
   }
 }
 
-
-export default  GameScene
+export default GameScene;

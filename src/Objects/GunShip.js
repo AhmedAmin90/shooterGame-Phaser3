@@ -31,5 +31,4 @@ class GunShip extends Entity {
   }
 }
 
-
-export default GunShip
+export default GunShip;

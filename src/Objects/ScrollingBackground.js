@@ -34,4 +34,4 @@ class ScrollingBackground {
   }
 }
 
-export default ScrollingBackground
+export default ScrollingBackground;

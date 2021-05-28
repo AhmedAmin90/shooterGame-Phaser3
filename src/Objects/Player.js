@@ -58,5 +58,4 @@ class Player extends Entity {
   }
 }
 
-
-export default  Player
+export default Player;

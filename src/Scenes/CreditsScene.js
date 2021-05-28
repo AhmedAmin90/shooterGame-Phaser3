@@ -2,7 +2,6 @@ import Phaser from 'phaser';
 import config from '../Config/config';
 import ScrollingBackground from '../Objects/ScrollingBackground';
 
-
 class CreditsScene extends Phaser.Scene {
   constructor() {
     super('Credits');
@@ -40,9 +39,9 @@ class CreditsScene extends Phaser.Scene {
       ease: 'Power1',
       duration: 8000,
       delay: 1000,
-      onComplete: function(){
-      this.scene.start('Title');
-      }.bind(this)
+      onComplete: function () {
+        this.scene.start('Title');
+      }.bind(this),
     });
 
     this.menuButton = this.add.sprite(400, 500, 'blueButton1').setInteractive();
@@ -59,16 +58,13 @@ class CreditsScene extends Phaser.Scene {
       const bg = new ScrollingBackground(this, key, 1 * 10);
       this.backgrounds.push(bg);
     }
-  
-
   }
 
-update() {
-  for (let i = 0; i < this.backgrounds.length; i += 1) {
-    this.backgrounds[i].update();
+  update() {
+    for (let i = 0; i < this.backgrounds.length; i += 1) {
+      this.backgrounds[i].update();
+    }
   }
 }
 
-}
-
-export default CreditsScene
+export default CreditsScene;

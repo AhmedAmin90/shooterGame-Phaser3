@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { getData  } from '../ScoreApi';
+import { getData } from '../ScoreApi';
 import ScrollingBackground from '../Objects/ScrollingBackground';
 
 class HighScoresScene extends Phaser.Scene {
@@ -41,7 +41,6 @@ class HighScoresScene extends Phaser.Scene {
       this.scene.start('Title');
     });
 
-
     this.backgrounds = [];
     for (let i = 0; i < 1; i += 1) {
       const keys = ['background2'];
@@ -58,4 +57,4 @@ class HighScoresScene extends Phaser.Scene {
   }
 }
 
-export default  HighScoresScene
+export default HighScoresScene;

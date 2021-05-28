@@ -1,18 +1,13 @@
 import Phaser from 'phaser';
 import config from '../Config/config';
 
-
 class TitleScene extends Phaser.Scene {
   constructor() {
     super('Title');
   }
 
-  preload() {
-    
-  }
-
   create() {
-    this.add.image(200 , 200 ,'background');
+    this.add.image(200, 200, 'background');
 
     this.gameButton = this.add.sprite(100, 200, 'blueButton1').setInteractive();
     this.centerButton(this.gameButton, 1);
@@ -68,14 +63,11 @@ class TitleScene extends Phaser.Scene {
       fontStyle: 'bold',
       color: 'white',
       align: 'center',
-      marginBottom: '20px'
+      marginBottom: '20px',
     });
 
     this.title.setOrigin(0.5);
-
   }
-
-
 
   centerButton(gameObject, offset = 0) {
     Phaser.Display.Align.In.Center(
@@ -99,5 +91,4 @@ class TitleScene extends Phaser.Scene {
   }
 }
 
-
-export default  TitleScene
+export default TitleScene;

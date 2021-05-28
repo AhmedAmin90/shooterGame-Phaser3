@@ -8,4 +8,4 @@ class EnemyLaser extends Entity {
   }
 }
 
-export default EnemyLaser
+export default EnemyLaser;

@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import  {sendData}  from '../ScoreApi';
+import { sendData } from '../ScoreApi';
 import ScrollingBackground from '../Objects/ScrollingBackground';
 
 class GameOverScene extends Phaser.Scene {
@@ -29,7 +29,7 @@ class GameOverScene extends Phaser.Scene {
       this.scene.start('Title');
       const user = document.querySelector('div');
       user.classList.remove('show');
-      user.classList.add('hide')
+      user.classList.add('hide');
     });
 
     this.saveScore = this.add.sprite(
@@ -47,17 +47,17 @@ class GameOverScene extends Phaser.Scene {
     this.saveScore.setInteractive();
 
     this.saveScore.on('pointerup', () => {
-      const btn = document.querySelector('button')
+      const btn = document.querySelector('button');
       const user = document.querySelector('div');
-      const input = document.querySelector('input')
+      const input = document.querySelector('input');
       user.classList.remove('hide');
       user.classList.add('show');
-      btn.addEventListener('click', ()=>{
-      user.classList.remove('show');
-      user.classList.add('hide');
-      if (input.value !== null) sendData(input.value, this.score);
-      input.value = '';
-      })
+      btn.addEventListener('click', () => {
+        user.classList.remove('show');
+        user.classList.add('hide');
+        if (input.value !== null) sendData(input.value, this.score);
+        input.value = '';
+      });
     }, this);
 
     this.backgrounds = [];
@@ -76,4 +76,4 @@ class GameOverScene extends Phaser.Scene {
   }
 }
 
-export default  GameOverScene
+export default GameOverScene;

@@ -8,4 +8,4 @@ class PlayerLaser extends Entity {
   }
 }
 
-export default  PlayerLaser
+export default PlayerLaser;

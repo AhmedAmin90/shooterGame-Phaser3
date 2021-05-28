@@ -1,7 +1,7 @@
 const myApiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/q9gCOWUoQdHlTLV9p8RX/scores/';
 
 const sendData = async (userName, userScore) => {
-   fetch(myApiUrl, {
+  fetch(myApiUrl, {
     method: 'POST',
     mode: 'cors',
     headers: {
@@ -37,4 +37,4 @@ const getData = async () => {
   }
 };
 
-export {sendData , getData} ;
+export { sendData, getData };

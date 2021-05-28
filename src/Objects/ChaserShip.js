@@ -45,4 +45,4 @@ class ChaserShip extends Entity {
   }
 }
 
-export default  ChaserShip
+export default ChaserShip;
