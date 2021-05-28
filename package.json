@@ -7,10 +7,10 @@
     "./src/index.js"
   ],
   "scripts": {
-    "start": "npm run build && webpack-dev-server --port=8000",
-    "build": "webpack",
+    "start": "webpack --watch",
     "test": "jest",
-    "watch": "webpack --watch"
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
