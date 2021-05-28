@@ -10,7 +10,8 @@
     "start": "webpack --watch",
     "test": "jest",
     "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "heroku-prebuild": "npm install --dev"
   },
   "repository": {
     "type": "git",
