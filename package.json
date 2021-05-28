@@ -28,6 +28,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
+    "jest-canvas-mock": "^2.3.1",
     "phaser": "^3.3.0",
     "raw-loader": "^0.5.1",
     "stylelint": "^13.13.1",
@@ -37,6 +38,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "jest-expect-subclass": "^1.0.1",
     "node-fetch": "^2.6.1",
     "phaser": "^3.3.0",
     "terser-webpack-plugin": "^5.1.1",
