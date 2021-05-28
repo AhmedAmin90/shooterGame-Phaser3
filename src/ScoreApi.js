@@ -3,9 +3,9 @@ const myApiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api
 const sendData = async (userName, userScore) => {
   let finalscore;
   if (userScore === 0) 
-       {finalscore = '0';}
+    {finalscore = '0';}
   else  
-     {finalscore = userScore };
+    {finalscore = userScore };
    fetch(myApiUrl, {
     method: 'POST',
     mode: 'cors',
@@ -26,19 +26,16 @@ const sendData = async (userName, userScore) => {
 };
 
 const getData = async () => {
-  const dataSc = {
-    method: 'Get',
-    mode: 'cors',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-  };
-
   try {
-    const res = await fetch(myApiUrl, dataSc);
+    const res = await fetch(myApiUrl, {
+      method: 'Get',
+      mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    });
     const data = await res.json();
-
     return data;
   } catch (error) {
     throw new Error(error);

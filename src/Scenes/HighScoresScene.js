@@ -18,6 +18,7 @@ class HighScoresScene extends Phaser.Scene {
     this.title.setOrigin(0.5);
 
     getData().then((data) => {
+      // console.log(data);
       data.result.sort((a, b) => b.score - a.score)
         .slice(0, 5)
         .map((game, i) => {
