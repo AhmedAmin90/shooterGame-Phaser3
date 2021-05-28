@@ -1,6 +1,7 @@
 import 'phaser';
 import config from '../Config/config';
 import Button from '../Objects/Button';
+import {ScrollingBackground} from './Entities'
 
 export default class TitleScene extends Phaser.Scene {
   constructor () {
@@ -19,24 +20,49 @@ export default class TitleScene extends Phaser.Scene {
 
     this.model = this.sys.game.globals.model;
     if (this.model.musicOn === true && this.model.bgMusicPlaying === false) {
-      this.bgMusic = this.sound.add('bgMusic', { volume: 0.5, loop: true });
+      this.bgMusic = this.sound.add('bgMusic', { volume: 0.9, loop: true });
       this.bgMusic.play();
       this.model.bgMusicPlaying = true;
       this.sys.game.globals.bgMusic = this.bgMusic;
     }
   }
 
-  centerButton (gameObject, offset = 0) {
+  // centerButton (gameObject, offset = 0) {
+  //   Phaser.Display.Align.In.Center(
+  //     gameObject,
+  //     this.add.zone(config.width/2, config.height/2 - offset * 100, config.width, config.height)
+  //   );
+  // }
+
+  // centerButtonText (gameText, gameButton) {
+  //   Phaser.Display.Align.In.Center(
+  //     gameText,
+  //     gameButton
+  //   );
+  // }
+
+  update() {
+    this.backgrounds = ['logo']
+  }
+
+  centerButton(gameObject, offset = 0) {
     Phaser.Display.Align.In.Center(
       gameObject,
-      this.add.zone(config.width/2, config.height/2 - offset * 100, config.width, config.height)
+      this.add.zone(
+        config.width / 2,
+        config.height / 2 - offset * 100,
+        config.width,
+        config.height,
+      ),
     );
   }
 
-  centerButtonText (gameText, gameButton) {
-    Phaser.Display.Align.In.Center(
-      gameText,
-      gameButton
-    );
+  centerButtonText(gameText, gameButton) {
+    if (this != null) {
+      Phaser.Display.Align.In.Center(
+        gameText,
+        gameButton,
+      );
+    }
   }
 };
