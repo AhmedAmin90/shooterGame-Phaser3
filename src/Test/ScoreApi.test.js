@@ -1,4 +1,5 @@
-import { sendData, getData } from '../ScoreApi';
+import { getData } from '../ScoreApi';
+import 'regenerator-runtime';
 
 global.fetch = jest.fn(() => Promise.resolve({
   json: () => Promise.resolve({
@@ -6,25 +7,6 @@ global.fetch = jest.fn(() => Promise.resolve({
     score: 30,
   }),
 }));
-
-describe('Send user name and the score', () => {
-  test('Save the user name and the score', () => sendData('Ahmed', 30).then((response) => {
-    expect(typeof response).toBe('object');
-    expect(response).toEqual({
-      user: 'Ahmed',
-      score: 30,
-    });
-  }));
-});
-
-describe('Using an API to post new scores', () => {
-  test('Should save a new score with the username', () => sendData('Ahmed', 30).then((response) => {
-    expect(response).toEqual({
-      user: 'Ahmed',
-      score: 30,
-    });
-  }));
-});
 
 describe('Get The score and user', () => {
   test('Return an object with two keys', () => getData().then((response) => {
@@ -39,5 +21,11 @@ describe('Get the user name and score from myApiUrl', () => {
       user: 'Ahmed',
       score: 30,
     });
+  }));
+});
+
+describe('Get the user name and score from myApiUrl', () => {
+  test('fetch called one time', () => getData().then(() => {
+    expect(fetch).toHaveBeenCalledTimes(3);
   }));
 });
