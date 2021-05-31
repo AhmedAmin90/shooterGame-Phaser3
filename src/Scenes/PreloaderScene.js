@@ -79,7 +79,7 @@ class PreloaderScene extends Phaser.Scene {
     this.load.image('blueButton2', 'assets/ui/blue_button030.png');
     this.load.image('box', 'assets/ui/grey_box.png');
     this.load.image('checkedBox', 'assets/ui/blue_boxCheckmark.png');
-    this.load.audio('gameMusic', './assets/PreparingforWar.mp3');
+    // this.load.audio('gameMusic', './assets/PreparingforWar.mp3');
   }
 
   ready() {
