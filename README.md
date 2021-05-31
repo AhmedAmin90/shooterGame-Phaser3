@@ -1,19 +1,17 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 #  Shooter Game.
  
-> In this project, I created a web application using JS and Phaser3 framework for simple shooter game.
+> In this project, I created a web application using JS and Phaser3 framework for a simple shooter game.
 
-
-Explain what were your initial objectives (at the end of day 2) of the project and which ones did you (or not) achieve and why:
 
 - My objects at this project to create a simple and easy to use shooter game with basic functions:
     1. Basic and attractive game design.
-    2. Basic options that meet the requirments of this game.
-    3. Adding score option for the players who wants to show up their scores.
+    2. Basic options that meet the requirements of this game.
+    3. Adding score options for the players who want to show up their scores.
 
 
 
-# How to play ?
+# How to play?
 
 1. Firstly you will see the loading scene:
 
@@ -21,12 +19,12 @@ Explain what were your initial objectives (at the end of day 2) of the project a
 
 <img src="./dist/assets/readme-assests/loading.png"> 
 
-2. After loading assests, you will find these options, Select the first Button: Play.
+2. After loading assets, you will find these options, Select the first Button: Play.
 ## Boot scene:
 
 <img src="./dist/assets/readme-assests/boot.png"> 
 
-3 You will enter to the game, You are the hero and you will fight the enemies (Take care from small enemies :D , they will follow you).
+3 You will enter the game, You are the hero and you will fight the enemies (Take care from small enemies :D, they will follow you).
 ## Game scene:
 
 <img src="./dist/assets/readme-assests/game.png"> 
@@ -39,7 +37,7 @@ Explain what were your initial objectives (at the end of day 2) of the project a
     - Space for fire.
 
 
-5. You can save your score by click on Save score button and enter your name.
+5. You can save your score by click on the Save score button and enter your name.
 ## Save score scene:
 
 <img src="./dist/assets/readme-assests/score.png"> 
@@ -69,7 +67,7 @@ Explain what were your initial objectives (at the end of day 2) of the project a
  
 ## Setup
 
-1. To run this project locally, please ensure you have npm installed and local server plugin in VS code on your machine.
+1. To run this project locally, please ensure you have npm installed and the local server plugin in VS code on your machine.
 2. Open the terminal.
 3. Clone this repository by running:
 
@@ -94,7 +92,7 @@ npm run build
 
 
 # Notes:
-- I downloaded my assests from https://opengameart.org/.
+- I downloaded my assets from https://opengameart.org/.
 
 
 ## Authors
