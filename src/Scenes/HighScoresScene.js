@@ -2,7 +2,6 @@ import Phaser from 'phaser';
 import { getData } from '../ScoreApi';
 import ScrollingBackground from '../Objects/ScrollingBackground';
 
-
 class HighScoresScene extends Phaser.Scene {
   constructor() {
     super({ key: 'HighScores' });

@@ -1,8 +1,7 @@
 import Phaser from 'phaser';
 import { sendData } from '../ScoreApi';
 import ScrollingBackground from '../Objects/ScrollingBackground';
-import {removeInput , showInput} from './helper'
-import GameScene from './GameScene'
+import { removeInput, showInput } from './helper';
 
 class GameOverScene extends Phaser.Scene {
   constructor() {
@@ -10,9 +9,8 @@ class GameOverScene extends Phaser.Scene {
   }
 
   init(s) {
-    if (s === 1)
-    this.score = 0;
-    else this.score = s - 1
+    if (s === 1) this.score = 0;
+    else this.score = s - 1;
   }
 
   create() {
@@ -25,14 +23,13 @@ class GameOverScene extends Phaser.Scene {
     });
     this.title.setOrigin(0.5);
 
-
     this.menuButton = this.add.sprite(400, 500, 'blueButton1').setInteractive();
     this.menuText = this.add.text(0, 0, 'Menu', { fontSize: '32px', fill: '#fff' });
     Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
     this.menuButton.on('pointerdown', () => {
       this.score = 0;
       this.scene.start('Title');
-      removeInput()
+      removeInput();
     });
 
     this.saveScore = this.add.sprite(
@@ -52,15 +49,13 @@ class GameOverScene extends Phaser.Scene {
     this.saveScore.on('pointerup', () => {
       const btn = document.querySelector('button');
       const input = document.querySelector('input');
-      showInput()
+      showInput();
       btn.addEventListener('click', () => {
         if (input.value !== null) { sendData(input.value, this.score.toString()); }
         removeInput();
         this.scene.start('Title');
       });
     }, this);
-
- 
 
     this.backgrounds = [];
     for (let i = 0; i < 1; i += 1) {

@@ -1,6 +1,6 @@
 const myApiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/q9gCOWUoQdHlTLV9p8RX/scores/';
 
-const sendData = (userName, userScore) => new Promise((resolve, reject) =>  {
+const sendData = (userName, userScore) => new Promise((resolve, reject) => {
   fetch(myApiUrl, {
     method: 'POST',
     mode: 'cors',
@@ -10,9 +10,9 @@ const sendData = (userName, userScore) => new Promise((resolve, reject) =>  {
     body: JSON.stringify({ user: userName, score: userScore }),
   }).then((res) => {
     res.json();
-  }).then((json) => resolve (json)).catch((e) => {
-    reject (e)
-  })
+  }).then((json) => resolve(json)).catch((e) => {
+    reject(e);
+  });
 });
 
 const getData = () => new Promise((resolve, reject) => {

@@ -39,7 +39,7 @@ class GameScene extends Phaser.Scene {
 
     let score = 1;
     const sText = this;
-    sText.scoreText = sText.add.text(0, 0, `Score: ${score-1}`, { fontSize: '32px', fill: 'green' });
+    sText.scoreText = sText.add.text(0, 0, `Score: ${score - 1}`, { fontSize: '32px', fill: 'green' });
     this.anims.create({
       key: 'sprExplosion',
       frames: this.anims.generateFrameNumbers('sprExplosion'),
@@ -87,7 +87,6 @@ class GameScene extends Phaser.Scene {
         playerLaser.destroy();
         score += 1;
         sText.scoreText.setText(`Score: ${score - 1}`);
-        
       }
     });
     this.physics.add.overlap(this.player, this.enemies, (player, enemy) => {
@@ -144,8 +143,6 @@ class GameScene extends Phaser.Scene {
       callbackScope: this,
       loop: true,
     });
-
-
   }
 
   update() {
@@ -232,7 +229,6 @@ class GameScene extends Phaser.Scene {
     }
     return arr;
   }
-
 }
 
 export default GameScene;
