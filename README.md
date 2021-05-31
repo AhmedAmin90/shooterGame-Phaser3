@@ -4,10 +4,35 @@
 > In this project, I created a web application using JS and Phaser3 framework for a simple shooter game.
 
 
-- My Objectives at this project to create a simple and easy to use shooter game with basic functions:
+# - My Objectives at the end of day two at this project to create a simple and easy to use shooter game with basic functions:
     1. Basic and attractive game design.
     2. Basic options that meet the requirements of this game.
     3. Adding score options for the players who want to show up their scores.
+## I successfully achieved these objectives, and I am thinking later to create different levels by increasing the enemies in the game scene.
+
+# GAME DESIGN:
+Introduction
+I need to create a shooter game, that has battle scene, hero and different kinds of enemies and allies.
+
+Story:
+The aliens attack the earth with all of their power, but fortunately the hero is here to protect us.
+So our future is between his hands, the hero player has to fight very well against the enemies.
+The hero can move his astronomy ship to avoid the enemies and their bullets. 
+
+Assets
+I downloaded the assets (images, objects and sounds) to be compatible with space.
+
+### The assets examples:
+1. Hero:
+- <img src="./dist/assets/hero.png"> 
+2. Enemies:
+- <img src="./dist/assets/sprEnemy0.png"> 
+- <img src="./dist/assets/sprEnemy1.png"> 
+- <img src="./dist/assets/sprEnemy2.png"> 
+
+3. Backgrounds:
+- <img src="./dist/assets/sky1.jpg"> 
+- <img src="./dist/assets/sky2.png"> 
 
 
 
