@@ -4,7 +4,7 @@
 > In this project, I created a web application using JS and Phaser3 framework for a simple shooter game.
 
 
-- My objects at this project to create a simple and easy to use shooter game with basic functions:
+- My Objectives at this project to create a simple and easy to use shooter game with basic functions:
     1. Basic and attractive game design.
     2. Basic options that meet the requirements of this game.
     3. Adding score options for the players who want to show up their scores.
@@ -90,6 +90,11 @@ npm run build
 
 6. Open the local server (Open VS code and open your local server ):
 
+7. For Testing:
+
+```
+npm run test
+```
 
 # Notes:
 - I downloaded my assets from https://opengameart.org/.

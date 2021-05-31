@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { sendData } from '../ScoreApi';
 import ScrollingBackground from '../Objects/ScrollingBackground';
+import {removeInput , showInput} from './helper'
 
 class GameOverScene extends Phaser.Scene {
   constructor() {
@@ -27,9 +28,7 @@ class GameOverScene extends Phaser.Scene {
     Phaser.Display.Align.In.Center(this.menuText, this.menuButton);
     this.menuButton.on('pointerdown', () => {
       this.scene.start('Title');
-      const user = document.querySelector('div');
-      user.classList.remove('show');
-      user.classList.add('hide');
+      removeInput()
     });
 
     this.saveScore = this.add.sprite(
@@ -48,15 +47,11 @@ class GameOverScene extends Phaser.Scene {
 
     this.saveScore.on('pointerup', () => {
       const btn = document.querySelector('button');
-      const user = document.querySelector('div');
       const input = document.querySelector('input');
-      user.classList.remove('hide');
-      user.classList.add('show');
+      showInput()
       btn.addEventListener('click', () => {
-        user.classList.remove('show');
-        user.classList.add('hide');
         if (input.value !== null) { sendData(input.value, this.score.toString()); }
-        input.value = '';
+        removeInput()
       });
     }, this);
 
