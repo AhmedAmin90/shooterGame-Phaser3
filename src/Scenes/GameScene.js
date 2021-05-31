@@ -16,10 +16,7 @@ class GameScene extends Phaser.Scene {
       frameWidth: 32,
       frameHeight: 32,
     });
-    this.load.spritesheet('sprEnemy0', './assets/sprEnemy0.png', {
-      frameWidth: 16,
-      frameHeight: 32,
-    });
+    this.load.image('sprEnemy0', './assets/sprEnemy0.png');
     this.load.image('sprEnemy1', './assets/sprEnemy1.png');
     this.load.spritesheet('sprEnemy2', './assets/sprEnemy2.png', {
       frameWidth: 16,
@@ -40,9 +37,9 @@ class GameScene extends Phaser.Scene {
     music = this.sound.add('gameMusic', { volume: 1, loop: true });
     music.play();
 
-    let s = 0;
+    let score = 1;
     const sText = this;
-    sText.scoreText = sText.add.text(0, 0, `Score: ${s}`, { fontSize: '32px', fill: 'green' });
+    sText.scoreText = sText.add.text(0, 0, `Score: ${score-1}`, { fontSize: '32px', fill: 'green' });
     this.anims.create({
       key: 'sprExplosion',
       frames: this.anims.generateFrameNumbers('sprExplosion'),
@@ -88,8 +85,9 @@ class GameScene extends Phaser.Scene {
 
         enemy.explode(true);
         playerLaser.destroy();
-        s += 1;
-        sText.scoreText.setText(`Score: ${s}`);
+        score += 1;
+        sText.scoreText.setText(`Score: ${score - 1}`);
+        
       }
     });
     this.physics.add.overlap(this.player, this.enemies, (player, enemy) => {
@@ -98,7 +96,7 @@ class GameScene extends Phaser.Scene {
         player.explode(false);
         enemy.explode(true);
         music.stop();
-        player.onDestroy(s);
+        player.onDestroy(score);
       }
     });
     this.physics.add.overlap(this.player, this.enemyLasers, (player, laser) => {
@@ -107,7 +105,7 @@ class GameScene extends Phaser.Scene {
         player.explode(false);
         laser.destroy();
         music.stop();
-        player.onDestroy(s);
+        player.onDestroy(score);
       }
     });
 
@@ -146,6 +144,8 @@ class GameScene extends Phaser.Scene {
       callbackScope: this,
       loop: true,
     });
+
+
   }
 
   update() {
@@ -232,6 +232,7 @@ class GameScene extends Phaser.Scene {
     }
     return arr;
   }
+
 }
 
 export default GameScene;
